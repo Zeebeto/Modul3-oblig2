@@ -13,9 +13,11 @@ namespace Oblig2
 
         public override bool Move(string fromPosition, string toPosition)
         {
-            var diffCol = fromPosition[0] - toPosition[0];
-            var diffRow = fromPosition[1] - toPosition[1];
-            return Math.Abs(diffRow) == Math.Abs(diffCol);
+            return fromPosition[0] == toPosition[0] ||
+                   fromPosition[1] == toPosition[1];
+            //var diffCol = fromPosition[0] - toPosition[0];
+            //var diffRow = fromPosition[1] - toPosition[1];
+            //return Math.Abs(diffRow) == Math.Abs(diffCol);
         }
     }
 }
